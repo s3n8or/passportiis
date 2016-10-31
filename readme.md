@@ -17,7 +17,7 @@
 		**Passport.php** and **PassportServiceProvider.php**
 
     Modifaction Description:
-    	Updated all 'P100Y' instances to 'P1Y' to support Windows IIS.
+    	Updated all **P100Y** instances to **P1Y** to support Windows IIS.
 
 3.  File Modified:
 		**PersonalAccessTokens.vue**
