@@ -1,5 +1,5 @@
 {
-    "name": "jeremykenedy/passport-iis",
+    "name": "jeremykenedy/passportiis",
     "description": "Laravel Passport provides OAuth2 server support to Laravel. This package has IIS support.",
     "keywords": ["laravel", "passport", "oauth", "Windows IIS"],
     "license": "MIT",
