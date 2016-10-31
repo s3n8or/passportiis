@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "jeremykenedy\\Passport-iis\\": "src/"
+            "Laravel\\Passport\\": "src/"
         }
     },
     "extra": {
