@@ -5,8 +5,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Taylor Otwell, revised by Jeremy Kenedy",
-            "email": "taylor@laravel.com, jeremykenedy@gmail.com"
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
         }
     ],
     "require": {
