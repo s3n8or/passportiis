@@ -2,9 +2,12 @@
 
 namespace Laravel\Passport\Http\Controllers;
 
+use App\User;
+use App\Relationship;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Laravel\Passport\Passport;
+use Illuminate\Support\Facades\DB;
 use Laravel\Passport\PersonalAccessTokenResult;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
 
@@ -49,14 +52,33 @@ class PersonalAccessTokenController
      */
     public function store(Request $request)
     {
+
+        // Validate the token input
         $this->validation->make($request->all(), [
             'name' => 'required|max:255',
             'scopes' => 'array|in:'.implode(',', Passport::scopeIds()),
         ])->validate();
 
-        return $request->user()->createToken(
+        // Send a request for a new token
+        $newToken = $request->user()->createToken(
             $request->name, $request->scopes ?: []
         );
+
+        // Get the new token primary key for building the relationship
+        $tokenPrimaryKey = DB::table('oauth_access_tokens')->where('name', $request->name)->value('primary_key');
+
+        // Create the token Relationshio
+        Relationship::create([
+            'token_key'             => $tokenPrimaryKey,
+            'api_token_type'        => $request->name,
+            'api_client_id'         => $request->name,
+            'api_application_id'    => $request->name,
+        ]);
+
+
+        //Return the new token
+        return $newToken;
+
     }
 
     /**
