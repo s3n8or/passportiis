@@ -24,6 +24,7 @@
 
     Modifaction Description:
     	Added form fields and updated data() fields and store() function to handle fields:
+
 			* api_client_id
 			* api_application_id
 			* api_token_type
@@ -41,6 +42,7 @@
     	Updated validCsrf() method to support Windows IIS.
 
 References Used:
+
 https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
 https://github.com/laravel/passport/issues/47
 
