@@ -10,19 +10,19 @@
 1.  File Modified:
 		**2016_06_01_000002_create_oauth_access_tokens_table.php**
 
-	Modifaction Description:s:
+	Modification Description:
 		Add intremental primary key to table.
 
 2.  Files Modified:
 		**Passport.php** and **PassportServiceProvider.php**
 
-    Modifaction Description:
+    Modification Description:
     	Updated all **P100Y** instances to **P1Y** to support Windows IIS.
 
 3.  File Modified:
 		**PersonalAccessTokens.vue**
 
-    Modifaction Description:
+    Modification Description:
     	Added form fields and updated data() fields and store() function to handle fields:
 
 			* api_client_id
@@ -32,19 +32,19 @@
 4.  File Modified:
 		**PersonalAccessTokenController.php**
 
-    Modifaction Description:
+    Modification Description:
     	Updated store() method to build token Relationship before returning token.
 
 5.  File Modified:
 		**TokenGuard.php**
 
-    Modifaction Description:
+    Modification Description:
     	Updated validCsrf() method to support Windows IIS.
 
 References Used:
 
-https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
-https://github.com/laravel/passport/issues/47
+- https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
+- https://github.com/laravel/passport/issues/47
 
 ---
 
