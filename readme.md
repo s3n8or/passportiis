@@ -1,4 +1,4 @@
-# Laravel Passport - Customized for Windows IIS support
+# Laravel Passport - Customized for Windows IIS support [![License](http://jeremykenedy.com/license-mit.svg)](LICENSE) [![Build Status](https://travis-ci.org/jeremykenedy/passportiis.svg?branch=master)](https://travis-ci.org/jeremykenedy/passportiis)
 
 [![Build Status](https://travis-ci.org/laravel/passport.svg)](https://travis-ci.org/laravel/passport)
 [![Total Downloads](https://poser.pugx.org/laravel/passport/d/total.svg)](https://packagist.org/packages/laravel/passport)
