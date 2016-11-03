@@ -41,7 +41,23 @@
     Modification Description:
     	Updated validCsrf() method to support Windows IIS.
 
-References Used:
+## Additional Requirements
+
+1. 	Modify the `Kernel.php`
+
+	In order for scoped routes to work you will need update
+	your `api` with `auth:api` inside `middlewaregroups` in `app\Http\kernel.php`.
+	It should look like the following:
+
+	```
+		'api' => [
+			'throttle:60,1',
+			'bindings',
+			'auth:api',
+		],
+	```
+
+## References Used:
 
 - https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
 - https://github.com/laravel/passport/issues/47
