@@ -1,4 +1,4 @@
-# Laravel Passport - Customized for Windows IIS support 
+# Laravel Passport - Customized for Windows IIS Support 
 
 [![Build Status](https://travis-ci.org/laravel/passport.svg)](https://travis-ci.org/laravel/passport)
 [![Total Downloads](https://poser.pugx.org/laravel/passport/d/total.svg)](https://packagist.org/packages/laravel/passport)
@@ -6,7 +6,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/passport/v/unstable.svg)](https://packagist.org/packages/laravel/passport)
 [![License](https://poser.pugx.org/laravel/passport/license.svg)](https://packagist.org/packages/laravel/passport)
 
-# Custom Passport Modifications
+# Custom Passport Modifications for IIS Support
 1.  File Modified:
 		**2016_06_01_000002_create_oauth_access_tokens_table.php**
 
