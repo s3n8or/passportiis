@@ -38,8 +38,8 @@
 
 ```
     api_client_id
-		api_application_id
-		api_token_type
+    api_application_id
+	api_token_type
 ```
 
     **Modification Reason:**
