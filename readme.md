@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/jeremykenedy/passportiis.svg)](https://travis-ci.org/jeremykenedy/passportiis)
 [![Total Downloads](https://poser.pugx.org/jeremykenedy/passportiis/d/total.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
 [![Latest Stable Version](https://poser.pugx.org/jeremykenedy/passportiis/v/stable.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
-[![Latest Unstable Version](https://poser.pugx.org/jeremykenedy/passportiis/v/unstable.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
 [![License](https://poser.pugx.org/jeremykenedy/passportiis/license.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
 
 ## Installation
