@@ -28,7 +28,7 @@
     **Modification Description:**
     	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
 
-    **Modification Reason: **
+    **Modification Reason:**
         Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
 
 3.  **File Modified:**
