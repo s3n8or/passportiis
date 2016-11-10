@@ -23,7 +23,7 @@
         For other projects middlware to associate other relational data and better data structure.
 
 2.  **Files Modified:**
-		```Passport.php``` and [```PassportServiceProvider.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/PassportServiceProvider.php)
+		[```Passport.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Passport.php) and [```PassportServiceProvider.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/PassportServiceProvider.php)
 
     **Modification Description:**
     	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
@@ -32,7 +32,7 @@
         Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
 
 3.  **File Modified:**
-		```PersonalAccessTokens.vue```
+		[```PersonalAccessTokens.vue```](https://github.com/jeremykenedy/passportiis/blob/master/resources/assets/js/components/PersonalAccessTokens.vue)
 
     **Modification Description:**
     	Added form fields and updated data() fields and store() function to handle fields:
@@ -47,7 +47,7 @@
          For relational data.
 
 4.  **File Modified:**
-		```PersonalAccessTokenController.php```
+		[```PersonalAccessTokenController.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Http/Controllers/PersonalAccessTokenController.php)
 
     **Modification Description:**
     	Updated store() method to build token Relationship before returning token.
@@ -56,7 +56,7 @@
         Create token relationship to carry additional data and join ```oauth_access_tokens``` table to ```relationship``` table.
 
 5.  **File Modified:**
-		```TokenGuard.php```
+		[```TokenGuard.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Guards/TokenGuard.php)
 
     **Modification Description:**
     	Updated validCsrf() method to support Windows IIS.
