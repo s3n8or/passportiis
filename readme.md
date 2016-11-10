@@ -23,7 +23,7 @@
         For other projects middlware to associate other relational data and better data structure.
 
 2.  **Files Modified:**
-		```Passport.php``` and ```PassportServiceProvider.php```
+		```Passport.php``` and [```PassportServiceProvider.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/PassportServiceProvider.php)
 
     **Modification Description:**
     	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
