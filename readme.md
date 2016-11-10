@@ -13,28 +13,28 @@
 [packagist](https://packagist.org/packages/jeremykenedy/passportiis)
 
 ## File Modifications Made for IIS Support
-1.  File Modified:
+1.  **File Modified:**
 		```2016_06_01_000002_create_oauth_access_tokens_table.php```
 
-	Modification Description:
+	**Modification Description:**
 		Add intremental primary key to table.
         
-    Modification Reason:
+    **Modification Reason:**
         For other projects middlware to associate other relational data and better data structure.
 
-2.  Files Modified:
+2.  **Files Modified:**
 		```Passport.php``` and ```PassportServiceProvider.php```
 
-    Modification Description:
+    **Modification Description:**
     	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
 
-    Modification Reason: 
+    **Modification Reason: **
         Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
 
-3.  File Modified:
+3.  **File Modified:**
 		```PersonalAccessTokens.vue```
 
-    Modification Description:
+    **Modification Description:**
     	Added form fields and updated data() fields and store() function to handle fields:
 
 	```
@@ -43,22 +43,22 @@
 		 api_token_type
     ```
 
-    Modification Reason:
+    **Modification Reason:**
          For relational data.
 
-4.  File Modified:
+4.  **File Modified:**
 		```PersonalAccessTokenController.php```
 
-    Modification Description:
+    **Modification Description:**
     	Updated store() method to build token Relationship before returning token.
 
-5.  File Modified:
+5.  **File Modified:**
 		```TokenGuard.php```
 
-    Modification Description:
+    **Modification Description:**
     	Updated validCsrf() method to support Windows IIS.
         
-    Modification Reason:
+    **Modification Reason:**
         Better cfsr handling.
 
 ## Additional Requirements
