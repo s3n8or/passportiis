@@ -1,4 +1,4 @@
-# Laravel Passport - Customized for Windows IIS Support 
+# Laravel Passport - Customized for Windows IIS Support - v1.1.2
 
 [![Build Status](https://travis-ci.org/jeremykenedy/passportiis.svg)](https://travis-ci.org/jeremykenedy/passportiis)
 [![Total Downloads](https://poser.pugx.org/jeremykenedy/passportiis/d/total.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
@@ -8,7 +8,7 @@
 ## Installation
 ```
    composer require jeremykenedy/passportiis
-``` 
+```
 [packagist](https://packagist.org/packages/jeremykenedy/passportiis)
 
 ## File Modifications Made for IIS Support
@@ -17,7 +17,7 @@
 
 	**Modification Description:**
 		Add intremental primary key to table. Lines 17-18
-        
+
     **Modification Reason:**
         For other projects middlware to associate other relational data and better data structure.
 
@@ -50,7 +50,7 @@
 
     **Modification Description:**
     	Updated store() method to build token Relationship before returning token. Lines 6, and 67-79
-        
+
     **Modification Reason:**
         Create token relationship to carry additional data and join ```oauth_access_tokens``` table to ```relationship``` table.
 
@@ -59,7 +59,7 @@
 
     **Modification Description:**
     	Updated validCsrf() method to support Windows IIS. Lines 203-209
-        
+
     **Modification Reason:**
         Better cfsr handling.
 
@@ -121,9 +121,9 @@
 3. Create Relationship Migration
   Command:
     ```php artisan make:migration application_relationships```
-   
+
   Migration Content:
-  
+
   ```
     <?php
 
@@ -166,51 +166,51 @@
 
   ```
 
-## Helpful Commands   
+## Helpful Commands
 ###### To publish the Passport Vue components
   ```
       php artisan vendor:publish --tag=passport-components
   ```
-  
+
 ###### To Migrate Database
   ```
       php artisan migrate
   ```
-  
+
 ###### To Rollback a migration
   ```
       php artisan migrate:rollback
   ```
-  
+
 ###### To Reset the Migration table and Rollback migrations
   ```
       php artisan migrate:reset
   ```
-  
+
     Take Note: If a migration fails, you rollback changes, and a table still remains in the database, delete it manually then run a migration.
-    
+
 ###### To Regenerate token issue certificates
   ```
       php artisan passport:install
   ```
-  
+
 ###### To clean and rebuild the cache
   ```
       php artisan config:cache
   ```
-  
-    Take Important Note: This will in-validate any previously issued tokens.      
-    
+
+    Take Important Note: This will in-validate any previously issued tokens.
+
 ###### To install assets and update autoloader
   ```
       composer update
   ```
-  
+
 ###### To recompile vue assets
   ```
       gulp
   ```
-    
+
 ## References Used:
 
 - https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
