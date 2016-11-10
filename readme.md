@@ -26,14 +26,14 @@
         Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
 
 3.  File Modified:
-		**PersonalAccessTokens.vue**
+		```PersonalAccessTokens.vue```
 
     Modification Description:
     	Added form fields and updated data() fields and store() function to handle fields:
 
-			* api_client_id
-			* api_application_id
-			* api_token_type
+		 ```api_client_id```
+		 ```api_application_id```
+		 ```api_token_type```
 
     Modification Reason:
          For relational data.
@@ -45,7 +45,7 @@
     	Updated store() method to build token Relationship before returning token.
 
 5.  File Modified:
-		**TokenGuard.php**
+		```TokenGuard.php```
 
     Modification Description:
     	Updated validCsrf() method to support Windows IIS.
