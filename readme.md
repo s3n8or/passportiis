@@ -51,6 +51,9 @@
 
     **Modification Description:**
     	Updated store() method to build token Relationship before returning token.
+        
+    **Modification Reason:**
+        Create token relationship to carry additional data and join ```oauth_access_tokens``` table to ```relationship``` table.
 
 5.  **File Modified:**
 		```TokenGuard.php```
