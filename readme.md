@@ -36,11 +36,11 @@
     **Modification Description:**
     	Added form fields, updated data() fields and store() function to handle fields, and added minor styling. Lines 9-19, 51-55, 76-87, 149-174, 254-256, and 327-329
 
-	```
-         api_client_id
-		 api_application_id
-		 api_token_type
-    ```
+```
+    api_client_id
+		api_application_id
+		api_token_type
+```
 
     **Modification Reason:**
          For relational data.
@@ -80,11 +80,92 @@
 	```
 
 2. Create Relationship Model
-   -- WORKING / NEED TO ADD TO REPO --
+  Command:
+  ```php artisan make:model```
+
+  Model Contents:
+  ```
+    <?php
+
+    namespace App;
+
+    use Illuminate\Database\Eloquent\Model;
+
+    class Relationship extends Model
+    {
+        /**
+         * The table associated with the model.
+         *
+         * @var string
+         */
+        protected $table    = 'application_token_relationships';
+        protected $connection   = 'sqlsrv';
+        public $timestamps    = false;
+
+      /**
+       * Fillable fields for a Profile
+       *
+       * @var array
+       */
+      protected $fillable = [
+        'token_key',
+        'api_token_type',
+        'api_client_id',
+        'api_application_id'
+      ];
+
+    }
+
+  ```
 
 3. Create Relationship Migration
-   -- WORKING / NEED TO ADD TO REPO --
+  Command:
+    ```php artisan make:migration application_relationships```
    
+  Migration Content:
+  
+  ```
+    <?php
+
+    use Illuminate\Support\Facades\Schema;
+    use Illuminate\Database\Schema\Blueprint;
+    use Illuminate\Database\Migrations\Migration;
+
+    class ApplicationRelationships extends Migration
+    {
+        /**
+         * Run the migrations.
+         *
+         * @return void
+         */
+        public function up()
+        {
+            Schema::create('application_token_relationships', function (Blueprint $table) {
+
+                $table->increments('id');
+                $table->integer('token_key')->unsigned();
+                $table->foreign('token_key')->references('primary_key')->on('oauth_access_tokens')->onDelete('cascade');
+                $table->enum('api_token_type', ['uber', 'dev']);
+                $table->string('api_client_id');
+                $table->string('api_application_id');
+
+            });
+        }
+
+        /**
+         * Reverse the migrations.
+         *
+         * @return void
+         */
+        public function down()
+        {
+            Schema::drop('application_token_relationships');
+        }
+    }
+
+
+  ```
+
 ## Helpful Commands   
 ###### To publish the Passport Vue components
   ```
