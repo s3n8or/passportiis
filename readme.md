@@ -16,7 +16,7 @@
 		[```2016_06_01_000002_create_oauth_access_tokens_table.php```](https://github.com/jeremykenedy/passportiis/blob/master/database/migrations/2016_06_01_000002_create_oauth_access_tokens_table.php)
 
 	**Modification Description:**
-		Add intremental primary key to table.
+		Add intremental primary key to table. Lines 17-18
         
     **Modification Reason:**
         For other projects middlware to associate other relational data and better data structure.
@@ -25,7 +25,7 @@
 		[```Passport.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Passport.php) and [```PassportServiceProvider.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/PassportServiceProvider.php)
 
     **Modification Description:**
-    	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
+    	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS. [```Passport.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Passport.php) lines 188 and 207, [```PassportServiceProvider.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/PassportServiceProvider.php) Line 107
 
     **Modification Reason:**
         Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
@@ -34,7 +34,7 @@
 		[```PersonalAccessTokens.vue```](https://github.com/jeremykenedy/passportiis/blob/master/resources/assets/js/components/PersonalAccessTokens.vue)
 
     **Modification Description:**
-    	Added form fields and updated data() fields and store() function to handle fields:
+    	Added form fields, updated data() fields and store() function to handle fields, and added minor styling. Lines 9-19, 51-55, 76-87, 149-174, 254-256, and 327-329
 
 	```
          api_client_id
@@ -49,7 +49,7 @@
 		[```PersonalAccessTokenController.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Http/Controllers/PersonalAccessTokenController.php)
 
     **Modification Description:**
-    	Updated store() method to build token Relationship before returning token.
+    	Updated store() method to build token Relationship before returning token. Lines 6, and 67-79
         
     **Modification Reason:**
         Create token relationship to carry additional data and join ```oauth_access_tokens``` table to ```relationship``` table.
@@ -58,7 +58,7 @@
 		[```TokenGuard.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Guards/TokenGuard.php)
 
     **Modification Description:**
-    	Updated validCsrf() method to support Windows IIS.
+    	Updated validCsrf() method to support Windows IIS. Lines 203-209
         
     **Modification Reason:**
         Better cfsr handling.
