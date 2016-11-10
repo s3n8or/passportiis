@@ -8,16 +8,22 @@
 
 # Custom Passport Modifications for IIS Support
 1.  File Modified:
-		**2016_06_01_000002_create_oauth_access_tokens_table.php**
+		```2016_06_01_000002_create_oauth_access_tokens_table.php```
 
 	Modification Description:
 		Add intremental primary key to table.
+        
+    Modification Reason:
+        For other projects middlware to associate other relational data and better data structure.
 
 2.  Files Modified:
-		**Passport.php** and **PassportServiceProvider.php**
+		```Passport.php``` and ```PassportServiceProvider.php```
 
     Modification Description:
-    	Updated all **P100Y** instances to **P1Y** to support Windows IIS.
+    	Updated all ```P100Y``` instances to ```P1Y``` to support Windows IIS.
+
+    Modification Reason: 
+        Corrects date of token expiration on creation, otherwise it will expire at the same time is is created.
 
 3.  File Modified:
 		**PersonalAccessTokens.vue**
@@ -29,8 +35,11 @@
 			* api_application_id
 			* api_token_type
 
+    Modification Reason:
+         For relational data.
+
 4.  File Modified:
-		**PersonalAccessTokenController.php**
+		```PersonalAccessTokenController.php```
 
     Modification Description:
     	Updated store() method to build token Relationship before returning token.
@@ -40,6 +49,9 @@
 
     Modification Description:
     	Updated validCsrf() method to support Windows IIS.
+        
+    Modification Reason:
+        Better cfsr handling.
 
 ## Additional Requirements
 
@@ -57,6 +69,18 @@
 		],
 	```
 
+2. Create Relationship Model
+   -- WORKING / NEED TO ADD TO REPO --
+
+3. Create Relationship Migration
+   -- WORKING / NEED TO ADD TO REPO --
+   
+## Helpful Commands   
+  * -- WORKING / NEED TO ADD TO REPO --
+  * -- WORKING / NEED TO ADD TO REPO --
+  * -- WORKING / NEED TO ADD TO REPO --
+  * -- WORKING / NEED TO ADD TO REPO --
+   
 ## References Used:
 
 - https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
