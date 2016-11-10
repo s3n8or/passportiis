@@ -14,7 +14,7 @@
 
 ## File Modifications Made for IIS Support
 1.  **File Modified:**
-		```2016_06_01_000002_create_oauth_access_tokens_table.php```
+		[```2016_06_01_000002_create_oauth_access_tokens_table.php```](https://github.com/jeremykenedy/passportiis/blob/master/database/migrations/2016_06_01_000002_create_oauth_access_tokens_table.php)
 
 	**Modification Description:**
 		Add intremental primary key to table.
