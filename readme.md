@@ -10,6 +10,7 @@
 ```
    composer require jeremykenedy/passportiis
 ``` 
+[packagist](https://packagist.org/packages/jeremykenedy/passportiis)
 
 ## File Modifications Made for IIS Support
 1.  File Modified:
@@ -83,46 +84,46 @@
    -- WORKING / NEED TO ADD TO REPO --
    
 ## Helpful Commands   
-  * To publish the Passport Vue components
+###### To publish the Passport Vue components
   ```
       php artisan vendor:publish --tag=passport-components
   ```
   
-  * To Migrate Database
+###### To Migrate Database
   ```
       php artisan migrate
   ```
   
-  * To Rollback a migration
+###### To Rollback a migration
   ```
       php artisan migrate:rollback
   ```
   
-  * To Reset the Migration table and Rollback migrations
+###### To Reset the Migration table and Rollback migrations
   ```
       php artisan migrate:reset
   ```
   
     Take Note: If a migration fails, you rollback changes, and a table still remains in the database, delete it manually then run a migration.
     
-  * To Regenerate token issue certificates
+###### To Regenerate token issue certificates
   ```
       php artisan passport:install
   ```
   
-  * To clean and rebuild the cache
+###### To clean and rebuild the cache
   ```
       php artisan config:cache
   ```
   
     Take Important Note: This will in-validate any previously issued tokens.      
     
-  * To install assets and update autoloader
+###### To install assets and update autoloader
   ```
       composer update
   ```
   
-  * To recompile vue assets
+###### To recompile vue assets
   ```
       gulp
   ```
