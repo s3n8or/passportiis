@@ -6,7 +6,12 @@
 [![Latest Unstable Version](https://poser.pugx.org/laravel/passport/v/unstable.svg)](https://packagist.org/packages/laravel/passport)
 [![License](https://poser.pugx.org/laravel/passport/license.svg)](https://packagist.org/packages/laravel/passport)
 
-## File Modifications for IIS Support
+## Installation
+```
+   composer require jeremykenedy/passportiis
+``` 
+
+## File Modifications Made for IIS Support
 1.  File Modified:
 		```2016_06_01_000002_create_oauth_access_tokens_table.php```
 
@@ -78,11 +83,50 @@
    -- WORKING / NEED TO ADD TO REPO --
    
 ## Helpful Commands   
-  * -- WORKING / NEED TO ADD TO REPO --
-  * -- WORKING / NEED TO ADD TO REPO --
-  * -- WORKING / NEED TO ADD TO REPO --
-  * -- WORKING / NEED TO ADD TO REPO --
-   
+  * To publish the Passport Vue components
+  ```
+      php artisan vendor:publish --tag=passport-components
+  ```
+  
+  * To Migrate Database
+  ```
+      php artisan migrate
+  ```
+  
+  * To Rollback a migration
+  ```
+      php artisan migrate:rollback
+  ```
+  
+  * To Reset the Migration table and Rollback migrations
+  ```
+      php artisan migrate:reset
+  ```
+  
+    Take Note: If a migration fails, you rollback changes, and a table still remains in the database, delete it manually then run a migration.
+    
+  * To Regenerate token issue certificates
+  ```
+      php artisan passport:install
+  ```
+  
+  * To clean and rebuild the cache
+  ```
+      php artisan config:cache
+  ```
+  
+    Take Important Note: This will in-validate any previously issued tokens.      
+    
+  * To install assets and update autoloader
+  ```
+      composer update
+  ```
+  
+  * To recompile vue assets
+  ```
+      gulp
+  ```
+    
 ## References Used:
 
 - https://laracasts.com/discuss/channels/laravel/laravel-53-passport-api-unauthenticated-in-postman-using-personal-access-tokens
