@@ -63,6 +63,15 @@
     **Modification Reason:**
         Better cfsr handling.
 
+6.  **File Modified:**
+        [```AccessTokenRepository.php```](https://github.com/jeremykenedy/passportiis/blob/master/src/Bridge/AccessTokenRepository.php)
+
+    **Modification Description:**
+    	Updated to match Laravel/Passport master.
+
+    **Modification Reason:**
+        Fix $database not found issue in file AccessTokenRepository.php on api call. Lines 61-74
+
 ## Additional Requirements
 
 1. 	Modify the `Kernel.php`
