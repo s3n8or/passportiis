@@ -206,8 +206,7 @@
   ```
       php artisan config:cache
   ```
-
-    Take Important Note: This will in-validate any previously issued tokens.
+Take Important Note: This will in-validate any previously issued tokens.
 
 ###### To install assets and update autoloader
   ```
