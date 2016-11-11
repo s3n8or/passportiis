@@ -1,4 +1,4 @@
-# Laravel Passport - Customized for Windows IIS Support - v1.1.1
+# Laravel Passport Customized for Windows IIS Support - v1.1.0
 
 [![Total Downloads](https://poser.pugx.org/jeremykenedy/passportiis/d/total.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
 [![Latest Stable Version](https://poser.pugx.org/jeremykenedy/passportiis/v/stable.svg)](https://packagist.org/packages/jeremykenedy/passportiis)
