@@ -40,8 +40,7 @@
     api_application_id
 	api_token_type
 ```
-
-    **Modification Reason:**
+**Modification Reason:**
          For relational data.
 
 4.  **File Modified:**
