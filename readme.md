@@ -35,13 +35,12 @@
     **Modification Description:**
     	Added form fields, updated data() fields and store() function to handle fields, and added minor styling. Lines 9-19, 51-55, 76-87, 149-174, 254-256, and 327-329
 
-```
-    api_client_id
-    api_application_id
-	api_token_type
-```
-
-   **Modification Reason:**
+    ```
+        api_client_id
+        api_application_id
+        api_token_type
+    ```
+    **Modification Description:**
          For relational data.
 
 4.  **File Modified:**
