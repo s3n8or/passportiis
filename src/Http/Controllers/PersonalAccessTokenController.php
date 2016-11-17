@@ -40,7 +40,7 @@ class PersonalAccessTokenController
     public function forUser(Request $request)
     {
         return $request->user()->tokens->load('client')->filter(function ($token) {
-            return $token->client->personal_access_client && ! $token->revoked;
+            return $token->client->personal_access_client; // && ! $token->revoked;
         })->values();
     }
 
@@ -55,7 +55,7 @@ class PersonalAccessTokenController
 
         // Validate the token input
         $this->validation->make($request->all(), [
-            'name' => 'required|max:255',
+            'name' => 'required|unique:oauth_access_tokens|max:255',
             'scopes' => 'array|in:'.implode(',', Passport::scopeIds()),
         ])->validate();
 

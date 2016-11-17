@@ -55,7 +55,7 @@
                                     -->
                                     <th>Created</th>
                                     <th>Expires</th>
-                                    <th class="no-search no-sort">Actions</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
 
@@ -82,7 +82,7 @@
                                     </td>
 
                                     <td style="vertical-align: middle;">
-                                        API Aplpication ID
+                                        API Application ID
                                     </td>
                                     -->
 
@@ -98,9 +98,14 @@
 
                                     <!-- Delete Button -->
                                     <td style="vertical-align: middle;">
-                                        <a class="btn btn-warning btn-xs" @click="revoke(token)">
-                                            Revoke
-                                        </a>
+                                        <div v-if="token.revoked" class="text-small text-danger">
+                                            Revoked
+                                        </div>
+                                        <div v-else>
+                                            <a class="btn btn-warning btn-xs" @click="revoke(token)">
+                                                Revoke
+                                            </a>
+                                        </div>
                                     </td>
 
                                 </tr>
@@ -166,7 +171,7 @@
                             <label class="col-md-4 control-label" for="api_token_type" style="padding-left: 0;">Token Type</label>
                             <div class="radio-container">
                                 <input type="radio" id="api_token_type_uber" value="uber" v-model="form.api_token_type">
-                                <label for="api_token_type_uber">über</label>
+                                <label for="api_token_type_uber">Live</label>
                             </div>
                             <div class="radio-container last">
                                 <input type="radio" id="api_token_type_dev" value="dev" v-model="form.api_token_type" checked>
@@ -176,15 +181,12 @@
                             <!-- Scopes -->
                             <div class="form-group" v-if="scopes.length > 0">
                                 <label class="col-md-4 control-label">Scopes / Access</label>
-
                                 <div class="col-md-6">
                                     <div v-for="scope in scopes">
                                         <div class="checkbox">
                                             <label>
-                                                <input type="checkbox"
-                                                    @click="toggleScope(scope.id)"
-                                                    :checked="scopeIsAssigned(scope.id)">
-                                                    {{ scope.id }}
+                                                <input type="checkbox" @click="toggleScope(scope.id)" :checked="scopeIsAssigned(scope.id)">
+                                                {{ scope.id }}
                                             </label>
                                         </div>
                                     </div>
