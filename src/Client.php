@@ -69,4 +69,14 @@ class Client extends Model
     {
         return $this->personal_access_client || $this->password_client;
     }
+
+    /**
+     * Override to provide the date format in an IIS compatible format
+     * 
+     * @return string
+     */
+    protected function getDateFormat()
+    {
+        return 'Y-m-d H:i:s.U';
+    }
 }

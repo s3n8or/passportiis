@@ -47,4 +47,14 @@ class AuthCode extends Model
     {
         return $this->hasMany(Client::class);
     }
+
+    /**
+     * Override to provide the date format in an IIS compatible format
+     * 
+     * @return string
+     */
+    protected function getDateFormat()
+    {
+        return 'Y-m-d H:i:s.U';
+    }
 }
